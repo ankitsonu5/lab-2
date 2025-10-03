@@ -19,7 +19,7 @@ export default function Home() {
   // Auto-play for featured tests carousel
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentFeaturedSlide(prev => (prev + 1) % featuredTests.length);
+      setCurrentFeaturedSlide(prev => (prev + 1) % 4); // 4 featured tests
     }, 5000); // Change slide every 5 seconds
 
     return () => clearInterval(interval);
@@ -71,13 +71,7 @@ export default function Home() {
     setCurrentSlide(index);
   };
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % banners.length);
-  };
 
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + banners.length) % banners.length);
-  };
 
   const featuredTests = [
     {
@@ -814,7 +808,7 @@ export default function Home() {
                 Most Booked<br />Checkups
               </h2>
               <p className="text-gray-600 text-lg mb-8 max-w-md">
-                India's fastest AI powered & temperature controlled supply chain to collect and test your blood in freshest state.
+                India&apos;s fastest AI powered & temperature controlled supply chain to collect and test your blood in freshest state.
               </p>
               <button className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:border-[#a382cf] hover:text-[#a382cf] transition-all font-semibold">
                 View All Checkups
@@ -857,7 +851,7 @@ export default function Home() {
               {/* Women's Health - Bottom Left */}
               <div className="bg-gradient-to-br from-[#83c7bc] to-[#6fb8ad] rounded-3xl p-6 text-white flex flex-col justify-between hover:shadow-2xl transition-all cursor-pointer group hover:scale-105">
                 <div className="flex justify-between items-start">
-                  <h3 className="text-lg font-bold">Women's<br />Health</h3>
+                  <h3 className="text-lg font-bold">Women&apos;s<br />Health</h3>
                   <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-all">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"/>
@@ -1235,38 +1229,5 @@ export default function Home() {
   );
 }
 
-const features = [
-  { icon: "🏥", title: "Certified Labs", desc: "NABL-grade processes & calibrated analyzers" },
-  { icon: "🧪", title: "Home Collection", desc: "Trained phlebotomists at your doorstep" },
-  { icon: "⚡", title: "Fast Reports", desc: "Digital reports within 24–48 hours" },
-  { icon: "💳", title: "Transparent Pricing", desc: "No hidden charges. Clear bills." },
-];
 
-const tests = [
-  { name: "Complete Blood Count (CBC)", desc: "General health check", price: 299 },
-  { name: "Thyroid Profile (T3, T4, TSH)", desc: "Thyroid screening", price: 499 },
-  { name: "Vitamin D (25-OH)", desc: "Bone & immunity", price: 699 },
-  { name: "Diabetes Package", desc: "FBS, PPBS, HbA1c", price: 799 },
-  { name: "Lipid Profile", desc: "Heart health", price: 599 },
-  { name: "Liver Function Test (LFT)", desc: "Liver assessment", price: 749 },
-];
-
-const steps = [
-  { title: "Choose test or package", desc: "Search and select your required test." },
-  { title: "Home sample collection", desc: "Expert visits your address at the chosen time." },
-  { title: "Get digital reports", desc: "Access reports online; consult with doctors." },
-];
-
-const testimonials = [
-  { name: "Aarav", city: "Delhi", quote: "Home collection was on time and very hygienic." },
-  { name: "Mira", city: "Bengaluru", quote: "Reports arrived the next day with detailed insights." },
-  { name: "Rohit", city: "Mumbai", quote: "Great prices and professional staff." },
-];
-
-const faqs = [
-  { q: "Do you provide home sample collection?", a: "Yes, trained phlebotomists visit your address at your chosen time." },
-  { q: "When will I receive my reports?", a: "Typically within 24–48 hours depending on the test." },
-  { q: "Are your labs certified?", a: "Yes, we follow NABL-grade processes and ICMR guidelines." },
-  { q: "How can I book a test?", a: "Use the Book a Home Collection form above or call us." },
-];
 
