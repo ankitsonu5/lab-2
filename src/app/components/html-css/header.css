@@ -1,0 +1,423 @@
+/* Header Styles */
+.header {
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #f3f4f6;
+    position: relative;
+    z-index: 50;
+}
+
+.header-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+}
+
+/* Logo Section */
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 3rem;
+    width: auto;
+}
+
+/* Search Section */
+.search-section {
+    flex: 1;
+    max-width: 32rem;
+    margin: 0 2rem;
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1.25rem;
+    width: 1.25rem;
+    color: #9ca3af;
+    pointer-events: none;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.5rem 0.75rem 0.5rem 2.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 9999px;
+    background: #f9fafb;
+    color: #374151;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.search-input:focus {
+    outline: none;
+    ring: 1px;
+    ring-color: #3b82f6;
+    border-color: #3b82f6;
+}
+
+.search-input::placeholder {
+    color: #6b7280;
+}
+
+/* Navigation Section */
+.nav-section {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-btn {
+    display: flex;
+    align-items: center;
+    color: #374151;
+    font-weight: 500;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.2s;
+}
+
+.dropdown-btn:hover {
+    color: #2563eb;
+}
+
+.dropdown-arrow {
+    margin-left: 0.25rem;
+    height: 1rem;
+    width: 1rem;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 0.5rem;
+    width: 16rem;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    z-index: 50;
+    display: none;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-content {
+    padding: 1rem;
+}
+
+.dropdown-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.75rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.2s;
+}
+
+.service-item:hover {
+    background: #f9fafb;
+}
+
+.service-icon {
+    font-size: 1.125rem;
+}
+
+.service-name {
+    font-size: 0.875rem;
+    color: #374151;
+}
+
+/* Offers Badge */
+.offers-badge {
+    background: #fef3c7;
+    color: #d97706;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Login Button */
+.login-btn {
+    display: flex;
+    align-items: center;
+    color: #374151;
+    font-weight: 500;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.2s;
+}
+
+.login-btn:hover {
+    color: #2563eb;
+}
+
+.login-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.25rem;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    padding: 1rem;
+    display: none;
+}
+
+.modal-overlay.show {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 1rem;
+    max-width: 28rem;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    background: linear-gradient(to right, #14b8a6, #06b6d4);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 1rem 1rem 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.modal-close {
+    width: 2rem;
+    height: 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.modal-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.modal-close svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.modal-subtitle {
+    color: #14b8a6;
+    margin-bottom: 1rem;
+}
+
+/* Form Styles */
+.booking-form {
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #14b8a6;
+    box-shadow: 0 0 0 2px rgba(20, 184, 166, 0.2);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 4rem;
+}
+
+/* Contact Options */
+.contact-options {
+    margin-bottom: 1rem;
+}
+
+.contact-title {
+    text-align: center;
+    color: #6b7280;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+.contact-btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    transition: background-color 0.2s;
+}
+
+.whatsapp-btn {
+    background: #16a34a;
+    color: white;
+}
+
+.whatsapp-btn:hover {
+    background: #15803d;
+}
+
+.call-btn {
+    background: #2563eb;
+    color: white;
+}
+
+.call-btn:hover {
+    background: #1d4ed8;
+}
+
+.close-btn {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.close-btn:hover {
+    background: #e5e7eb;
+}
+
+.contact-btn svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Contact Info */
+.contact-info {
+    padding: 1rem;
+    background: #f9fafb;
+    border-radius: 0.5rem;
+}
+
+.contact-info p {
+    font-size: 0.875rem;
+    color: #6b7280;
+    text-align: center;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem 0;
+        gap: 1rem;
+    }
+    
+    .search-section {
+        margin: 0;
+        max-width: none;
+        width: 100%;
+    }
+    
+    .nav-section {
+        gap: 1rem;
+    }
+    
+    .dropdown-menu {
+        width: 100vw;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}

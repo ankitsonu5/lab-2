@@ -1,0 +1,188 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --accent: #0f172a; /* site-wide focus/brand accent */
+  --accent-contrast: #ffffff;
+  --glass-from: rgba(255, 255, 255, 0.65);
+  --glass-to: rgba(255, 255, 255, 0.45);
+  --glass-border: rgba(15, 23, 42, 0.14);
+  --glass-shadow: 0 8px 24px rgba(2, 6, 23, 0.12);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* Custom gradient utilities */
+.gradient-hero {
+  background: linear-gradient(135deg, #a7f3d0 0%, #6ee7b7 25%, #34d399 50%, #10b981 75%, #059669 100%);
+}
+
+.gradient-card-yellow {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #f59e0b 100%);
+}
+
+.gradient-card-orange {
+  background: linear-gradient(135deg, #fed7aa 0%, #fdba74 50%, #f97316 100%);
+}
+
+.gradient-card-pink {
+  background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 50%, #ec4899 100%);
+}
+
+.gradient-card-blue {
+  background: linear-gradient(135deg, #dbeafe 0%, #93c5fd 50%, #3b82f6 100%);
+}
+
+.gradient-card-green {
+  background: linear-gradient(135deg, #d1fae5 0%, #86efac 50%, #22c55e 100%);
+}
+
+.gradient-card-purple {
+  background: linear-gradient(135deg, #e9d5ff 0%, #c4b5fd 50%, #8b5cf6 100%);
+}
+
+/* Additional red gradient */
+.gradient-card-red {
+  background: linear-gradient(135deg, #fee2e2 0%, #fca5a5 50%, #ef4444 100%);
+}
+
+
+/* Smooth transitions */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Focus styles */
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+[role="button"]:focus,
+a:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(15, 23, 42, 0.08);
+}
+
+/* Exceptions: category pills should not show focus outline */
+.category-pill:focus,
+.category-pill:focus-visible {
+  outline: none !important;
+  outline-offset: 0 !important;
+}
+
+
+/* Animation utilities */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+/* Animated gradient utilities */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-gradient {
+  background-size: 200% 200%;
+  animation: gradientShift 12s ease infinite;
+}
+
+/* Subtle glass pulse for cards */
+@keyframes glassPulse {
+  0% { box-shadow: 0 8px 24px rgba(2, 6, 23, 0.10); }
+  50% { box-shadow: 0 12px 28px rgba(2, 6, 23, 0.18); }
+  100% { box-shadow: 0 8px 24px rgba(2, 6, 23, 0.10); }
+}
+.glass-pulse { animation: glassPulse 6s ease-in-out infinite; }
+
+/* Glassy UI utilities (site‑wide) */
+.glass-surface {
+  background: linear-gradient(135deg, var(--glass-from), var(--glass-to));
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  box-shadow: var(--glass-shadow);
+}
+
+.btn-glass {
+  background: linear-gradient(135deg, var(--glass-from), var(--glass-to));
+  color: var(--accent);
+  border: 1px solid var(--glass-border);
+  border-radius: 9999px;
+  backdrop-filter: blur(10px) saturate(140%);
+  -webkit-backdrop-filter: blur(10px) saturate(140%);
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.6) inset, var(--glass-shadow);
+}
+
+.btn-glass:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), var(--glass-from));
+  border-color: rgba(15, 23, 42, 0.22);
+}
+
+.card-glass {
+  background: linear-gradient(135deg, var(--glass-from), var(--glass-to));
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  box-shadow: var(--glass-shadow);
+}
+
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Hover effects */
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Glass effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}

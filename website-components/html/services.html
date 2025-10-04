@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Access PathLab</title>
+    <link rel="stylesheet" href="../css/services.css">
+</head>
+<body>
+    <!-- Service Cards Section -->
+    <section class="services-section">
+        <div class="services-container">
+            <div class="section-header">
+                <h2 class="section-title">Our Healthcare Services</h2>
+                <p class="section-subtitle">Choose from our comprehensive range of medical services</p>
+            </div>
+            
+            <div class="services-grid">
+                
+                <!-- Service Card 1 -->
+                <div class="service-card card-teal" onclick="openBookingModal('Lab Tests')">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M9 12l2 2 4-4"></path>
+                            <circle cx="12" cy="12" r="9"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Book Lab Tests</h3>
+                    <p class="card-description">Blood tests, urine tests, and comprehensive lab diagnostics</p>
+                    <div class="card-features">
+                        <span class="feature">✓ Quick Results</span>
+                        <span class="feature">✓ Home Collection</span>
+                        <span class="feature">✓ Digital Reports</span>
+                    </div>
+                    <button class="card-button">
+                        <span>Book Now</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <polyline points="9,18 15,12 9,6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="service-card card-purple" onclick="openBookingModal('Health Checkups')">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Popular Health Checks</h3>
+                    <p class="card-description">Complete body checkups and preventive health screenings</p>
+                    <div class="card-features">
+                        <span class="feature">✓ Full Body Checkup</span>
+                        <span class="feature">✓ Cancer Screening</span>
+                        <span class="feature">✓ Heart Health</span>
+                    </div>
+                    <button class="card-button">
+                        <span>Book Now</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <polyline points="9,18 15,12 9,6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="service-card card-orange" onclick="openBookingModal('X-rays & Scans')">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21,15 16,10 5,21"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">X-rays Scans & MRI</h3>
+                    <p class="card-description">Advanced imaging services including X-rays, CT scans, and MRI</p>
+                    <div class="card-features">
+                        <span class="feature">✓ Digital X-rays</span>
+                        <span class="feature">✓ CT Scans</span>
+                        <span class="feature">✓ MRI Available</span>
+                    </div>
+                    <button class="card-button">
+                        <span>Book Now</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <polyline points="9,18 15,12 9,6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Additional Services Row -->
+            <div class="additional-services">
+                <h3 class="additional-title">More Services Available</h3>
+                <div class="services-list">
+                    <div class="service-item" onclick="openBookingModal('Blood Tests')">
+                        <span class="service-icon">🩸</span>
+                        <span class="service-name">Blood Tests</span>
+                    </div>
+                    <div class="service-item" onclick="openBookingModal('ECG')">
+                        <span class="service-icon">📈</span>
+                        <span class="service-name">ECG</span>
+                    </div>
+                    <div class="service-item" onclick="openBookingModal('Home Collection')">
+                        <span class="service-icon">🏠</span>
+                        <span class="service-name">Home Collection</span>
+                    </div>
+                    <div class="service-item" onclick="openBookingModal('Reports Online')">
+                        <span class="service-icon">📱</span>
+                        <span class="service-name">Online Reports</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="services-cta">
+                <h3>Need Help Choosing?</h3>
+                <p>Our healthcare experts are here to help you select the right tests</p>
+                <div class="cta-buttons">
+                    <button class="cta-btn primary" onclick="makeCall()">
+                        <span class="btn-icon">📞</span>
+                        <span>Call Expert</span>
+                    </button>
+                    <button class="cta-btn secondary" onclick="sendWhatsApp()">
+                        <span class="btn-icon">💬</span>
+                        <span>WhatsApp</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div class="booking-modal-overlay" id="bookingModal">
+        <div class="booking-modal">
+            <div class="modal-header">
+                <h2>Book Your Test</h2>
+                <button class="modal-close" onclick="closeBookingModal()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <p class="modal-subtitle">Fill the form below and we'll contact you</p>
+                
+                <form class="booking-form" id="bookingForm">
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Phone Number *</label>
+                        <input type="tel" name="phone" placeholder="+91 98765 43210" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" name="email" placeholder="your.email@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Service Required *</label>
+                        <select name="service" id="serviceSelect" required>
+                            <option value="">Select Service</option>
+                            <option value="Lab Tests">Lab Tests</option>
+                            <option value="Health Checkups">Health Checkups</option>
+                            <option value="X-rays & Scans">X-rays & Scans</option>
+                            <option value="Blood Tests">Blood Tests</option>
+                            <option value="ECG">ECG</option>
+                            <option value="Home Collection">Home Collection</option>
+                            <option value="Reports Online">Online Reports</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Additional Message</label>
+                        <textarea name="message" placeholder="Any specific requirements or questions..."></textarea>
+                    </div>
+                </form>
+
+                <div class="contact-options">
+                    <p class="contact-title">Choose how to contact us:</p>
+                    
+                    <button class="contact-btn whatsapp-btn" onclick="sendWhatsApp()">
+                        <span class="btn-icon">💬</span>
+                        <span>Send via WhatsApp</span>
+                    </button>
+                    
+                    <button class="contact-btn call-btn" onclick="makeCall()">
+                        <span class="btn-icon">📞</span>
+                        <span>Call Now</span>
+                    </button>
+                    
+                    <button class="contact-btn close-btn" onclick="closeBookingModal()">
+                        <span>Close</span>
+                    </button>
+                </div>
+
+                <div class="contact-info">
+                    <p>
+                        <strong>📞 Call:</strong> +91 98765 43210<br>
+                        <strong>⏰ Timing:</strong> 24/7 Available<br>
+                        <strong>🏠 Home Collection:</strong> Free
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/booking.js"></script>
+</body>
+</html>

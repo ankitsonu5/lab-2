@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header - Access PathLab</title>
+    <link rel="stylesheet" href="../css/header.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="pathlab-header">
+        <div class="header-container">
+            <div class="header-content">
+                
+                <!-- Logo Section -->
+                <div class="logo-section">
+                    <img src="../images/access-removebg-preview.png" alt="Access PathLab" class="pathlab-logo">
+                </div>
+
+                <!-- Search Section -->
+                <div class="search-section">
+                    <div class="search-box">
+                        <div class="search-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </div>
+                        <input type="text" class="search-input" placeholder="Lab Tests, Scans & Health Checkup Packages">
+                        <button class="search-btn" onclick="handleSearch()">Search</button>
+                    </div>
+                </div>
+
+                <!-- Navigation Section -->
+                <div class="nav-section">
+                    
+                    <!-- Healthcare Services Dropdown -->
+                    <div class="services-dropdown">
+                        <button class="dropdown-trigger" onclick="toggleServicesDropdown()">
+                            <span>Healthcare Services</span>
+                            <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <polyline points="6,9 12,15 18,9"></polyline>
+                            </svg>
+                        </button>
+                        
+                        <div class="dropdown-menu" id="servicesDropdown">
+                            <div class="dropdown-header">
+                                <h3>Our Services</h3>
+                                <p>Choose from our comprehensive healthcare services</p>
+                            </div>
+                            
+                            <div class="services-grid">
+                                <div class="service-item" onclick="openBookingModal('Lab Tests')">
+                                    <span class="service-icon">🧪</span>
+                                    <span class="service-name">Lab Tests</span>
+                                    <span class="service-desc">Blood, Urine & More</span>
+                                </div>
+                                
+                                <div class="service-item" onclick="openBookingModal('Health Checkups')">
+                                    <span class="service-icon">❤️</span>
+                                    <span class="service-name">Health Checkups</span>
+                                    <span class="service-desc">Complete Body Checkup</span>
+                                </div>
+                                
+                                <div class="service-item" onclick="openBookingModal('X-rays & Scans')">
+                                    <span class="service-icon">📷</span>
+                                    <span class="service-name">X-rays & Scans</span>
+                                    <span class="service-desc">Digital X-rays</span>
+                                </div>
+                                
+                                <div class="service-item" onclick="openBookingModal('MRI Scans')">
+                                    <span class="service-icon">🔬</span>
+                                    <span class="service-name">MRI Scans</span>
+                                    <span class="service-desc">Advanced Imaging</span>
+                                </div>
+                                
+                                <div class="service-item" onclick="openBookingModal('Blood Tests')">
+                                    <span class="service-icon">🩸</span>
+                                    <span class="service-name">Blood Tests</span>
+                                    <span class="service-desc">CBC, Sugar & More</span>
+                                </div>
+                                
+                                <div class="service-item" onclick="openBookingModal('ECG')">
+                                    <span class="service-icon">📈</span>
+                                    <span class="service-name">ECG</span>
+                                    <span class="service-desc">Heart Monitoring</span>
+                                </div>
+                                
+                                <div class="service-item" onclick="openBookingModal('Home Collection')">
+                                    <span class="service-icon">🏠</span>
+                                    <span class="service-name">Home Collection</span>
+                                    <span class="service-desc">Free Sample Pickup</span>
+                                </div>
+                                
+                                <div class="service-item" onclick="openBookingModal('Reports Online')">
+                                    <span class="service-icon">📱</span>
+                                    <span class="service-name">Reports Online</span>
+                                    <span class="service-desc">Digital Reports</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Offers Badge -->
+                    <div class="offers-badge">
+                        <span class="offers-icon">🎯</span>
+                        <span class="offers-text">Offers</span>
+                    </div>
+
+                    <!-- Login Button -->
+                    <button class="login-btn">
+                        <svg class="login-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <span>Login</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Booking Modal -->
+    <div class="booking-modal-overlay" id="bookingModal">
+        <div class="booking-modal">
+            <div class="modal-header">
+                <h2>Book Your Test</h2>
+                <button class="modal-close" onclick="closeBookingModal()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <p class="modal-subtitle">Fill the form below and we'll contact you</p>
+                
+                <form class="booking-form" id="bookingForm">
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Phone Number *</label>
+                        <input type="tel" name="phone" placeholder="+91 98765 43210" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" name="email" placeholder="your.email@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Service Required *</label>
+                        <select name="service" id="serviceSelect" required>
+                            <option value="">Select Service</option>
+                            <option value="Lab Tests">Lab Tests</option>
+                            <option value="Health Checkups">Health Checkups</option>
+                            <option value="X-rays & Scans">X-rays & Scans</option>
+                            <option value="MRI Scans">MRI Scans</option>
+                            <option value="Blood Tests">Blood Tests</option>
+                            <option value="ECG">ECG</option>
+                            <option value="Home Collection">Home Collection</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Additional Message</label>
+                        <textarea name="message" placeholder="Any specific requirements or questions..."></textarea>
+                    </div>
+                </form>
+
+                <div class="contact-options">
+                    <p class="contact-title">Choose how to contact us:</p>
+                    
+                    <button class="contact-btn whatsapp-btn" onclick="sendWhatsApp()">
+                        <span class="btn-icon">💬</span>
+                        <span>Send via WhatsApp</span>
+                    </button>
+                    
+                    <button class="contact-btn call-btn" onclick="makeCall()">
+                        <span class="btn-icon">📞</span>
+                        <span>Call Now</span>
+                    </button>
+                    
+                    <button class="contact-btn close-btn" onclick="closeBookingModal()">
+                        <span>Close</span>
+                    </button>
+                </div>
+
+                <div class="contact-info">
+                    <p>
+                        <strong>📞 Call:</strong> +91 98765 43210<br>
+                        <strong>⏰ Timing:</strong> 24/7 Available<br>
+                        <strong>🏠 Home Collection:</strong> Free
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/header.js"></script>
+</body>
+</html>

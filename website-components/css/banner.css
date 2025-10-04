@@ -1,0 +1,529 @@
+/* Banner CSS - Access PathLab */
+
+/* Banner Carousel Styles */
+.banner-carousel {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #14b8a6, #06b6d4);
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Carousel Slides */
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 40px 20px;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.carousel-slide.prev {
+    transform: translateX(-100%);
+}
+
+/* Slide Content */
+.slide-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Slide Text */
+.slide-text {
+    color: white;
+    z-index: 2;
+}
+
+.slide-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.price-highlight {
+    color: #fbbf24;
+    display: block;
+    font-size: 3rem;
+    margin-top: 10px;
+}
+
+/* Slide Features */
+.slide-features {
+    margin-bottom: 40px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.feature-icon {
+    width: 24px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #fbbf24;
+    flex-shrink: 0;
+}
+
+.feature-text {
+    font-weight: 500;
+}
+
+/* Slide Buttons */
+.slide-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.book-now-btn {
+    background: rgba(255, 255, 255, 0.9);
+    color: #374151;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.book-now-btn:hover {
+    background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.next-slide-btn {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.next-slide-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.next-slide-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Slide Image */
+.slide-image {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.family-image {
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.family-image:hover {
+    transform: scale(1.05);
+}
+
+/* Image Decorations */
+.image-decoration {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.decoration-1 {
+    width: 100px;
+    height: 100px;
+    top: -20px;
+    right: -20px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.decoration-2 {
+    width: 80px;
+    height: 80px;
+    bottom: -10px;
+    left: -10px;
+    animation: float 6s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Navigation Arrows */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
+
+.carousel-nav:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+    left: 30px;
+}
+
+.next-btn {
+    right: 30px;
+}
+
+.carousel-nav svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Slide Indicators */
+.slide-indicators {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 10;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: white;
+    border-color: white;
+    transform: scale(1.2);
+}
+
+.indicator:hover {
+    border-color: white;
+    transform: scale(1.1);
+}
+
+/* Slide Specific Backgrounds */
+.carousel-slide[data-slide="0"] {
+    background: linear-gradient(135deg, #14b8a6, #06b6d4);
+}
+
+.carousel-slide[data-slide="1"] {
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+}
+
+.carousel-slide[data-slide="2"] {
+    background: linear-gradient(135deg, #f59e0b, #ef4444);
+}
+
+/* Booking Modal Styles (Same as header) */
+.booking-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.booking-modal-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.booking-modal {
+    background: white;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.booking-modal-overlay.show .booking-modal {
+    transform: scale(1);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #14b8a6, #06b6d4);
+    color: white;
+    padding: 20px;
+    border-radius: 16px 16px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.modal-close {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.modal-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.modal-close svg {
+    width: 20px;
+    height: 20px;
+}
+
+.modal-body {
+    padding: 25px;
+}
+
+.modal-subtitle {
+    color: #14b8a6;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* Form Styles */
+.booking-form {
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #14b8a6;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Contact Options */
+.contact-options {
+    margin-bottom: 20px;
+}
+
+.contact-title {
+    text-align: center;
+    color: #6b7280;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.contact-btn {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn {
+    background: #25d366;
+    color: white;
+}
+
+.whatsapp-btn:hover {
+    background: #1da851;
+    transform: translateY(-2px);
+}
+
+.call-btn {
+    background: #3b82f6;
+    color: white;
+}
+
+.call-btn:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+}
+
+.close-btn {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.close-btn:hover {
+    background: #e5e7eb;
+}
+
+.btn-icon {
+    font-size: 18px;
+}
+
+/* Contact Info */
+.contact-info {
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.contact-info p {
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .banner-carousel {
+        height: 500px;
+    }
+    
+    .slide-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .slide-title {
+        font-size: 2.5rem;
+    }
+    
+    .price-highlight {
+        font-size: 2rem;
+    }
+    
+    .family-image {
+        height: 250px;
+    }
+    
+    .carousel-nav {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .prev-btn {
+        left: 15px;
+    }
+    
+    .next-btn {
+        right: 15px;
+    }
+    
+    .booking-modal {
+        width: 95%;
+        margin: 20px;
+    }
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Access PathLab - Leading diagnostic center offering comprehensive lab tests, health checkups, X-rays, MRI scans with home collection service.">
+    <meta name="keywords" content="pathlab, lab tests, health checkup, blood test, X-ray, MRI, home collection, diagnostic center">
+    <meta name="author" content="Access PathLab">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Access PathLab - Complete Healthcare Solutions">
+    <meta property="og:description" content="Book lab tests, health checkups, and medical scans with free home collection. Trusted diagnostic services with quick results.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://accesspathlab.com">
+    
+    <title>Access PathLab - Complete Healthcare Solutions | Lab Tests & Health Checkups</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="../header/header.css">
+    <link rel="stylesheet" href="../banner/banner.css">
+    <link rel="stylesheet" href="../services/services.css">
+    <link rel="stylesheet" href="../packages/packages.css">
+    <link rel="stylesheet" href="../concerns/concerns.css">
+    <link rel="stylesheet" href="../footer/footer.css">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="/familyhealth-removebg-preview.png" as="image">
+    <link rel="preload" href="/newbnner2.png" as="image">
+    <link rel="preload" href="/newbnner3.png" as="image">
+    <link rel="preload" href="/new.png" as="image">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <img src="/access-removebg-preview.png" alt="Access PathLab" class="loading-logo">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Loading Access PathLab...</p>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <div id="headerSection"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <!-- Banner Section -->
+        <div id="bannerSection"></div>
+
+        <!-- Services Section -->
+        <div id="servicesSection"></div>
+
+        <!-- Additional Sections -->
+        <div id="packagesSection"></div>
+        <div id="concernsSection"></div>
+        <div id="footerSection"></div>
+    </main>
+
+    <!-- Booking Modal -->
+    <div class="booking-modal-overlay" id="bookingModal">
+        <div class="booking-modal">
+            <div class="modal-header">
+                <h2>Book Your Test</h2>
+                <button class="modal-close" onclick="closeBookingModal()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <p class="modal-subtitle">Fill the form below and we'll contact you</p>
+                
+                <form class="booking-form" id="bookingForm">
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Phone Number *</label>
+                        <input type="tel" name="phone" placeholder="+91 98765 43210" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" name="email" placeholder="your.email@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Service Required *</label>
+                        <select name="service" id="serviceSelect" required>
+                            <option value="">Select Service</option>
+                            <option value="Family Checkup Package">Family Checkup Package</option>
+                            <option value="Complete Health Screening">Complete Health Screening</option>
+                            <option value="Senior Citizen Package">Senior Citizen Package</option>
+                            <option value="Lab Tests">Lab Tests</option>
+                            <option value="Health Checkups">Health Checkups</option>
+                            <option value="Pregnancy Tests">Pregnancy Tests & Care</option>
+                            <option value="Blood Tests">Blood Tests</option>
+                            <option value="ECG">ECG</option>
+                            <option value="Home Collection">Home Collection</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Additional Message</label>
+                        <textarea name="message" placeholder="Any specific requirements or questions..."></textarea>
+                    </div>
+                </form>
+
+                <div class="contact-options">
+                    <p class="contact-title">Choose how to contact us:</p>
+                    
+                    <button class="contact-btn whatsapp-btn" onclick="sendWhatsApp()">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Send via WhatsApp</span>
+                    </button>
+
+                    <button class="contact-btn call-btn" onclick="makeCall()">
+                        <i class="fas fa-phone"></i>
+                        <span>Call Now</span>
+                    </button>
+                    
+                    <button class="contact-btn close-btn" onclick="closeBookingModal()">
+                        <span>Close</span>
+                    </button>
+                </div>
+
+                <div class="contact-info">
+                    <p>
+                        <strong>📞 Call:</strong> +91 98765 43210<br>
+                        <strong>⏰ Timing:</strong> 24/7 Available<br>
+                        <strong>🏠 Home Collection:</strong> Free
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="home.js"></script>
+    <script src="../header/header.js"></script>
+    <script src="../banner/banner.js"></script>
+    <script src="../services/services.js"></script>
+    <script src="../packages/packages.js"></script>
+    <script src="../concerns/concerns.js"></script>
+    <script src="../footer/footer.js"></script>
+    <script src="../js/booking.js"></script>
+</body>
+</html>

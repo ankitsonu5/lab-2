@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Packages - Access PathLab</title>
+    <link rel="stylesheet" href="packages.css">
+</head>
+<body>
+    <!-- Health Packages Section -->
+    <section class="packages-section">
+        <div class="packages-container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Health Packages</h2>
+                <p class="section-subtitle">Choose from our specially designed health checkup packages</p>
+            </div>
+            
+            <div class="packages-grid">
+                
+                <!-- Package 1 -->
+                <div class="package-card popular" onclick="openBookingModal('Basic Health Package')">
+                    <div class="package-badge">Most Popular</div>
+                    <div class="package-icon">💊</div>
+                    <h3 class="package-title">Basic Health Package</h3>
+                    <div class="package-price">
+                        <span class="price-currency">₹</span>
+                        <span class="price-amount">199</span>
+                        <span class="price-period">/person</span>
+                    </div>
+                    <ul class="package-features">
+                        <li>✓ Complete Blood Count (CBC)</li>
+                        <li>✓ Blood Sugar (Fasting)</li>
+                        <li>✓ Lipid Profile</li>
+                        <li>✓ Liver Function Test</li>
+                        <li>✓ Kidney Function Test</li>
+                        <li>✓ Thyroid Profile</li>
+                    </ul>
+                    <button class="package-button">
+                        <span>Book Now</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <polyline points="9,18 15,12 9,6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="package-card premium" onclick="openBookingModal('Comprehensive Health Package')">
+                    <div class="package-badge">Best Value</div>
+                    <div class="package-icon">🏥</div>
+                    <h3 class="package-title">Comprehensive Health Package</h3>
+                    <div class="package-price">
+                        <span class="price-currency">₹</span>
+                        <span class="price-amount">399</span>
+                        <span class="price-period">/person</span>
+                    </div>
+                    <ul class="package-features">
+                        <li>✓ All Basic Package Tests</li>
+                        <li>✓ Vitamin D & B12</li>
+                        <li>✓ HbA1c (Diabetes)</li>
+                        <li>✓ Urine Analysis</li>
+                        <li>✓ ECG</li>
+                        <li>✓ Chest X-ray</li>
+                        <li>✓ Doctor Consultation</li>
+                    </ul>
+                    <button class="package-button">
+                        <span>Book Now</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <polyline points="9,18 15,12 9,6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="package-card executive" onclick="openBookingModal('Executive Health Package')">
+                    <div class="package-badge">Premium</div>
+                    <div class="package-icon">👑</div>
+                    <h3 class="package-title">Executive Health Package</h3>
+                    <div class="package-price">
+                        <span class="price-currency">₹</span>
+                        <span class="price-amount">699</span>
+                        <span class="price-period">/person</span>
+                    </div>
+                    <ul class="package-features">
+                        <li>✓ All Comprehensive Tests</li>
+                        <li>✓ Cancer Markers</li>
+                        <li>✓ Cardiac Risk Assessment</li>
+                        <li>✓ Ultrasound Abdomen</li>
+                        <li>✓ Stress Test</li>
+                        <li>✓ Specialist Consultation</li>
+                        <li>✓ Health Report Analysis</li>
+                    </ul>
+                    <button class="package-button">
+                        <span>Book Now</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <polyline points="9,18 15,12 9,6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Special Packages -->
+            <div class="special-packages">
+                <h3 class="special-title">Special Packages</h3>
+                <div class="special-grid">
+                    <div class="special-item" onclick="openBookingModal('Women Health Package')">
+                        <span class="special-icon">👩</span>
+                        <span class="special-name">Women Health Package</span>
+                        <span class="special-price">₹599</span>
+                    </div>
+                    <div class="special-item" onclick="openBookingModal('Senior Citizen Package')">
+                        <span class="special-icon">👴</span>
+                        <span class="special-name">Senior Citizen Package</span>
+                        <span class="special-price">₹799</span>
+                    </div>
+                    <div class="special-item" onclick="openBookingModal('Diabetes Package')">
+                        <span class="special-icon">🩺</span>
+                        <span class="special-name">Diabetes Package</span>
+                        <span class="special-price">₹299</span>
+                    </div>
+                    <div class="special-item" onclick="openBookingModal('Heart Health Package')">
+                        <span class="special-icon">❤️</span>
+                        <span class="special-name">Heart Health Package</span>
+                        <span class="special-price">₹499</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package Benefits -->
+            <div class="package-benefits">
+                <h3>Why Choose Our Health Packages?</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🏠</div>
+                        <h4>Free Home Collection</h4>
+                        <p>Sample collection at your doorstep</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">⚡</div>
+                        <h4>Quick Results</h4>
+                        <p>Reports within 24-48 hours</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📱</div>
+                        <h4>Digital Reports</h4>
+                        <p>Access reports online anytime</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">👨‍⚕️</div>
+                        <h4>Expert Consultation</h4>
+                        <p>Doctor consultation included</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="packages.js"></script>
+</body>
+</html>

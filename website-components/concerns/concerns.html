@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Concerns - Access PathLab</title>
+    <link rel="stylesheet" href="concerns.css">
+</head>
+<body>
+    <!-- Health Concerns Section -->
+    <section class="concerns-section">
+        <div class="concerns-container">
+            <div class="section-header">
+                <h2 class="section-title">Find Tests by Health Concern</h2>
+                <p class="section-subtitle">Get the right tests for your specific health concerns</p>
+            </div>
+            
+            <div class="concerns-grid">
+                
+                <!-- Heart Health -->
+                <div class="concern-card" onclick="openBookingModal('Heart Health Tests')">
+                    <div class="concern-icon">❤️</div>
+                    <h3 class="concern-title">Heart Health</h3>
+                    <p class="concern-description">Cardiac risk assessment and heart function tests</p>
+                    <ul class="concern-tests">
+                        <li>ECG</li>
+                        <li>Lipid Profile</li>
+                        <li>Cardiac Enzymes</li>
+                        <li>Blood Pressure</li>
+                    </ul>
+                    <button class="concern-button">View Tests</button>
+                </div>
+
+                <!-- Diabetes -->
+                <div class="concern-card" onclick="openBookingModal('Diabetes Tests')">
+                    <div class="concern-icon">🩺</div>
+                    <h3 class="concern-title">Diabetes</h3>
+                    <p class="concern-description">Blood sugar monitoring and diabetes management</p>
+                    <ul class="concern-tests">
+                        <li>HbA1c</li>
+                        <li>Fasting Glucose</li>
+                        <li>Random Glucose</li>
+                        <li>Insulin Levels</li>
+                    </ul>
+                    <button class="concern-button">View Tests</button>
+                </div>
+
+                <!-- Kidney Health -->
+                <div class="concern-card" onclick="openBookingModal('Kidney Function Tests')">
+                    <div class="concern-icon">🫘</div>
+                    <h3 class="concern-title">Kidney Health</h3>
+                    <p class="concern-description">Kidney function and urinary system assessment</p>
+                    <ul class="concern-tests">
+                        <li>Creatinine</li>
+                        <li>BUN</li>
+                        <li>Urine Analysis</li>
+                        <li>Protein Levels</li>
+                    </ul>
+                    <button class="concern-button">View Tests</button>
+                </div>
+
+                <!-- Liver Health -->
+                <div class="concern-card" onclick="openBookingModal('Liver Function Tests')">
+                    <div class="concern-icon">🫀</div>
+                    <h3 class="concern-title">Liver Health</h3>
+                    <p class="concern-description">Liver function and hepatic health evaluation</p>
+                    <ul class="concern-tests">
+                        <li>SGPT/ALT</li>
+                        <li>SGOT/AST</li>
+                        <li>Bilirubin</li>
+                        <li>Alkaline Phosphatase</li>
+                    </ul>
+                    <button class="concern-button">View Tests</button>
+                </div>
+
+                <!-- Thyroid -->
+                <div class="concern-card" onclick="openBookingModal('Thyroid Tests')">
+                    <div class="concern-icon">🦋</div>
+                    <h3 class="concern-title">Thyroid</h3>
+                    <p class="concern-description">Thyroid function and hormonal balance</p>
+                    <ul class="concern-tests">
+                        <li>TSH</li>
+                        <li>T3</li>
+                        <li>T4</li>
+                        <li>Anti-TPO</li>
+                    </ul>
+                    <button class="concern-button">View Tests</button>
+                </div>
+
+                <!-- Women's Health -->
+                <div class="concern-card" onclick="openBookingModal('Women Health Tests')">
+                    <div class="concern-icon">👩</div>
+                    <h3 class="concern-title">Women's Health</h3>
+                    <p class="concern-description">Specialized tests for women's health concerns</p>
+                    <ul class="concern-tests">
+                        <li>Hormonal Profile</li>
+                        <li>PCOS Panel</li>
+                        <li>Pregnancy Tests</li>
+                        <li>Breast Cancer Markers</li>
+                    </ul>
+                    <button class="concern-button">View Tests</button>
+                </div>
+
+                <!-- Bone Health -->
+                <div class="concern-card" onclick="openBookingModal('Bone Health Tests')">
+                    <div class="concern-icon">🦴</div>
+                    <h3 class="concern-title">Bone Health</h3>
+                    <p class="concern-description">Bone density and calcium metabolism</p>
+                    <ul class="concern-tests">
+                        <li>Vitamin D</li>
+                        <li>Calcium</li>
+                        <li>Phosphorus</li>
+                        <li>Bone Density Scan</li>
+                    </ul>
+                    <button class="concern-button">View Tests</button>
+                </div>
+
+                <!-- Cancer Screening -->
+                <div class="concern-card" onclick="openBookingModal('Cancer Screening Tests')">
+                    <div class="concern-icon">🎗️</div>
+                    <h3 class="concern-title">Cancer Screening</h3>
+                    <p class="concern-description">Early detection and cancer marker tests</p>
+                    <ul class="concern-tests">
+                        <li>PSA (Prostate)</li>
+                        <li>CA 125 (Ovarian)</li>
+                        <li>CEA (Colon)</li>
+                        <li>AFP (Liver)</li>
+                    </ul>
+                    <button class="concern-button">View Tests</button>
+                </div>
+            </div>
+
+            <!-- Additional Information -->
+            <div class="concerns-info">
+                <h3>Not Sure Which Tests You Need?</h3>
+                <p>Our healthcare experts can help you choose the right tests based on your symptoms and health concerns.</p>
+                <div class="info-buttons">
+                    <button class="info-btn primary" onclick="openBookingModal('Expert Consultation')">
+                        <span class="btn-icon">👨‍⚕️</span>
+                        <span>Consult Expert</span>
+                    </button>
+                    <button class="info-btn secondary" onclick="makeCall()">
+                        <span class="btn-icon">📞</span>
+                        <span>Call Now</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="concerns.js"></script>
+</body>
+</html>

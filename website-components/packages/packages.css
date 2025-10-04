@@ -1,0 +1,397 @@
+/* Packages CSS - Access PathLab */
+
+/* Packages Section */
+.packages-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+}
+
+.packages-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Section Header */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, #14b8a6, #06b6d4);
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #6b7280;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Packages Grid */
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+/* Package Cards */
+.package-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.package-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Package Types */
+.package-card.popular {
+    border-color: #14b8a6;
+}
+
+.package-card.premium {
+    border-color: #8b5cf6;
+    background: linear-gradient(135deg, #faf5ff, #f3e8ff);
+}
+
+.package-card.executive {
+    border-color: #f59e0b;
+    background: linear-gradient(135deg, #fffbeb, #fef3c7);
+}
+
+/* Package Badge */
+.package-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #14b8a6, #06b6d4);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.package-card.premium .package-badge {
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+}
+
+.package-card.executive .package-badge {
+    background: linear-gradient(135deg, #f59e0b, #ef4444);
+}
+
+/* Package Icon */
+.package-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    display: block;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.package-card:hover .package-icon {
+    transform: scale(1.2) rotate(10deg);
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+}
+
+/* Package Title */
+.package-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 20px;
+}
+
+/* Package Price */
+.package-price {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 5px;
+}
+
+.price-currency {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #14b8a6;
+}
+
+.price-amount {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #14b8a6;
+}
+
+.price-period {
+    font-size: 1rem;
+    color: #6b7280;
+}
+
+.package-card.premium .price-currency,
+.package-card.premium .price-amount {
+    color: #8b5cf6;
+}
+
+.package-card.executive .price-currency,
+.package-card.executive .price-amount {
+    color: #f59e0b;
+}
+
+/* Package Features */
+.package-features {
+    list-style: none;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.package-features li {
+    padding: 8px 0;
+    color: #374151;
+    font-size: 14px;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.package-features li:last-child {
+    border-bottom: none;
+}
+
+/* Package Button */
+.package-button {
+    width: 100%;
+    background: linear-gradient(135deg, #14b8a6, #06b6d4);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.package-button:hover {
+    background: linear-gradient(135deg, #0f766e, #0891b2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(20, 184, 166, 0.3);
+}
+
+.package-card.premium .package-button {
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+}
+
+.package-card.premium .package-button:hover {
+    background: linear-gradient(135deg, #7c3aed, #db2777);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+}
+
+.package-card.executive .package-button {
+    background: linear-gradient(135deg, #f59e0b, #ef4444);
+}
+
+.package-card.executive .package-button:hover {
+    background: linear-gradient(135deg, #d97706, #dc2626);
+    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
+}
+
+.package-button svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+.package-button:hover svg {
+    transform: translateX(4px);
+}
+
+/* Special Packages */
+.special-packages {
+    margin-bottom: 60px;
+}
+
+.special-title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 30px;
+}
+
+.special-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.special-item {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.special-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: #14b8a6;
+}
+
+.special-icon {
+    font-size: 2rem;
+}
+
+.special-name {
+    font-weight: 600;
+    color: #374151;
+    text-align: center;
+}
+
+.special-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #14b8a6;
+}
+
+/* Package Benefits */
+.package-benefits {
+    background: white;
+    padding: 50px 40px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.package-benefits h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 40px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.benefit-item {
+    text-align: center;
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.benefit-item h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.benefit-item p {
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .packages-section {
+        padding: 60px 0;
+    }
+    
+    .packages-container {
+        padding: 0 15px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .packages-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .package-card {
+        padding: 30px 20px;
+    }
+    
+    .price-amount {
+        font-size: 2.5rem;
+    }
+    
+    .special-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .package-benefits {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .packages-container {
+        padding: 0 10px;
+    }
+    
+    .package-card {
+        padding: 25px 15px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .special-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}
