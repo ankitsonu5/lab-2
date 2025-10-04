@@ -148,7 +148,7 @@ const LabTestsBooking = () => {
       else next.add(id)
       return next
     })
-    setToast(prev => (added.has(id) ? '' : `${name} added`))
+    setToast(() => (added.has(id) ? '' : `${name} added`))
     if (!added.has(id)) setTimeout(() => setToast(''), 1400)
   }
 

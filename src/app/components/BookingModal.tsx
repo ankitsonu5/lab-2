@@ -481,7 +481,7 @@ Please confirm my appointment. Thank you!`
                 className="w-5 h-5 text-teal-600 border-gray-300 rounded focus:ring-teal-500"
               />
               <label className="text-sm font-medium text-gray-700">
-                <span className="text-teal-600">🏠 Home Collection</span> - Free service (We'll collect samples from {bookingFor === 'self' ? 'your home' : "the patient's address"})
+                <span className="text-teal-600">🏠 Home Collection</span> - Free service (We&apos;ll collect samples from {bookingFor === 'self' ? 'your home' : 'the patient\'s address'})
               </label>
             </div>
 

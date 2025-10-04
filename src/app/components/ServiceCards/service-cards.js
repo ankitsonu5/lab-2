@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const serviceTypes = ['lab-tests', 'health-checks', 'xrays-mri'];
         card.setAttribute('data-service', serviceTypes[index]);
 
-        card.addEventListener('click', function(e) {
+        card.addEventListener('click', function() {
             const serviceType = this.getAttribute('data-service');
             const service = serviceData[serviceType];
 

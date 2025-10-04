@@ -1,7 +1,7 @@
 // Header JavaScript Functions
 
 // Global variables
-let selectedService = '';
+// let selectedService = ''; // Unused variable
 
 // Toggle dropdown menu
 function toggleDropdown() {
@@ -51,7 +51,7 @@ function closeBookingModal() {
 // Get form data
 function getFormData() {
     const form = document.querySelector('.booking-form');
-    const formData = new FormData(form);
+    // const formData = new FormData(form); // Unused variable
     
     return {
         name: form.querySelector('input[type="text"]').value,
@@ -62,17 +62,17 @@ function getFormData() {
     };
 }
 
-// Send WhatsApp message
-function sendWhatsApp() {
+// Send WhatsApp message (first version - will be overridden by enhanced version below)
+function sendWhatsAppBasic() {
     const data = getFormData();
-    
+
     const message = `Hi! I want to book ${data.service}.
 
 Name: ${data.name}
 Phone: ${data.phone}
 Email: ${data.email}
 Message: ${data.message}`;
-    
+
     const whatsappUrl = `https://wa.me/919876543210?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
 }

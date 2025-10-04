@@ -80,7 +80,7 @@ const ReviewsSection = () => {
               </div>
               
               <p className="text-gray-700 text-sm leading-relaxed">
-                "{review.review}"
+                &ldquo;{review.review}&rdquo;
               </p>
             </div>
           ))}
